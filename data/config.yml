@@ -1,0 +1,10 @@
+client:
+  token: "ODM2MTc3MDI1MzQwMjc2NzY3.YIaMig.2rFCNoWdd_cWG9xEAaacUfWdy1M"
+  prefix: "!"
+
+activities:
+  presence: "Checking Hoax"
+  type: "PLAYING"
+
+general:
+  footer: "DripLifeRP | © 2021"

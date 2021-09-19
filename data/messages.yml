@@ -1,0 +1,50 @@
+general:
+  footer: "DripLife RP | © 2021 "
+  color: "AQUA"
+  noPermissions:
+    embed:
+      title: "❌ | Geen Permissies"
+      description: "Je hebt niet genoeg `<required_permission>` om deze Commando uit te voeren!"
+  lessArguments:
+    embed:
+      title: "❌ | Er is iets fout gegaan..."
+      description: "Je hebt niet genoeg argumenten meegegeven! \n Probeer `<usage>`" 
+
+ticket:
+  embeds:
+
+    alreadyOwnsTicket:
+      title: "❌ | Er is iets fout gegaan.."
+      description: "Je hebt al ``1`` ticket openstaan! Sluit deze voordat je een andere opened!"
+
+    notInATicket: 
+      title: "❌ | Er is iets fout gegaan..."
+      description: "Je kan deze command alleen gebruiken in een ticket!"
+
+    ticketPanel:
+      title: "🎫 | DripLifeRP"
+      description: "Klik hier onder op de **button** om een Ticket aan te maken! \n"
+
+    closeTicket:
+      title: "❌ | Closing Ticket"
+      description: "Ticket wordt over ``10`` seconden gesloten!"
+
+    ticketOpened:
+      title: "🦺 | DripLifeRP"
+      description: "Selecteer hier onder een Category!"
+
+    ticketClaimed:
+      title: "🔐 | Ticket Claimed"
+      description: "<user> heeft de ticket geclaimed!"
+
+    addedToTicket:
+      title: "👥 | Added | 👥"
+      description: "<user> is succesvol toegevoegd aan de Ticket!"
+
+    removedFromTicket:
+      title: "👥 | Removed | 👥"
+      description: "<user> is succesvol verwijderd van deze ticket!!"
+
+    
+    
+

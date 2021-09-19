@@ -1,0 +1,25 @@
+{
+    "name": "DripeLifeRP",
+    "version": "1.0.0",
+    "description": "Discord bot for DripeLifeRP",
+    "main": "index.js",
+    "scripts": {
+        "test": "node ."
+    },
+    "keywords": [
+        "discord.js",
+        "v13",
+        "ticket-system",
+        "dripliferp"
+    ],
+    "author": "C R Y P T O#6646",
+    "license": "ISC",
+    "dependencies": {
+        "chalk": "^4.1.2",
+        "discord-ghost-transcript-v13": "^1.0.1",
+        "discord.js": "^13.0.0-dev.t1627906063.6e0ea02",
+        "fs": "^0.0.1-security",
+        "js-yaml": "^4.1.0",
+        "quick.db": "^7.1.3"
+    }
+}
