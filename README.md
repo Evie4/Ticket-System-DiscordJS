@@ -13,7 +13,7 @@ You need to use those setup commands!
 
 #1 (prefix)ticket role <@id> | This is the Support Role for the tickets
 #2 (prefix)ticket logchannel <#id> | Here will every channel be logged
-#2 (prefix)ticket category id | Dont tagg it just pot the ID there!
+#2 (prefix)ticket category id | Dont tagg it just put the ID there!
 
 
 REMINDER: I DIDNT MAKE A NPE HANDLER, SO IF YOU'RE TRYING TO START THE BOT WITHOUT THE SETUP IT WILL GET LOST
