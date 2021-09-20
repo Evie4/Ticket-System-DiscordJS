@@ -12,7 +12,6 @@ general:
 
 ticket:
   embeds:
-
     alreadyOwnsTicket:
       title: "❌ | Er is iets fout gegaan.."
       description: "Je hebt al ``1`` ticket openstaan! Sluit deze voordat je een andere opened!"
@@ -28,11 +27,20 @@ ticket:
     closeTicket:
       title: "❌ | Closing Ticket"
       description: "Ticket wordt over ``10`` seconden gesloten!"
-
+    
     ticketOpened:
       title: "🦺 | DripLifeRP"
-      description: "Selecteer hier onder een Category!"
-
+      description: "Leg uw probleem zo gedetaileerd mogelijk uit, Dan zal onze Support u z.s.m helpen!"
+      fields:
+        one:
+          name: "Ticket Maker:"
+          value: "<user>"
+          inline: true
+        second:
+          name: "Reason"
+          value: "<reason>"
+          inline: true
+          
     ticketClaimed:
       title: "🔐 | Ticket Claimed"
       description: "<user> heeft de ticket geclaimed!"
@@ -43,7 +51,11 @@ ticket:
 
     removedFromTicket:
       title: "👥 | Removed | 👥"
-      description: "<user> is succesvol verwijderd van deze ticket!!"
+      description: "<user> is succesvol verwijderd van deze ticket!"
+
+    selectCategory:
+        title: "🎟 | Selecteer Category"
+        description: "Selecteer een category voor je ticket!"
 
     
     

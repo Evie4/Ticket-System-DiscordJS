@@ -3,7 +3,6 @@ const client = new discord.Client({ intents: ["GUILDS", "GUILD_BANS", "GUILD_INV
 
 const { fetchTranscript } = require('discord-ghost-transcript-v13');
 const embeds = require('./../utils/embeds.js');
-2
 
 
 module.exports = async(client, interaction) => {

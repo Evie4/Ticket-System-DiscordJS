@@ -1,7 +1,14 @@
 const discord = require("discord.js");
 const client = new discord.Client({ intents: ["GUILDS", "GUILD_BANS", "GUILD_INVITES", "GUILD_MEMBERS", "GUILD_MESSAGES"] })
+let embeds = require("./../utils/embeds.js")
+
+const fs = require('fs')
+const yaml = require('js-yaml')
 
 client.dbmodel = require("./../models/Database.js")
+
+let config = yaml.load(fs.readFileSync(`./data/config.yml`, 'utf8'))
+let lang = yaml.load(fs.readFileSync(`./data/messages.yml`, 'utf8'))
 
 async function createTicketChannel(name, section, interaction) {
 
@@ -20,53 +27,48 @@ async function createTicketChannel(name, section, interaction) {
         await c.permissionOverwrites.create(interaction.user.id, { SEND_MESSAGES: true, VIEW_CHANNEL: true, EMBED_LINKS: true, ATTACH_FILES: true })
         await c.setParent(ticketCategory)
 
-        let embed = new discord.MessageEmbed()
-            .setTitle(`🦺 | DripLifeRP`)
-            .setDescription(`Selecteer hier onder een Category!`)
-            .setFooter(`DripLifeRP | © 2021 `)
-            .setTimestamp()
-            .setColor('AQUA')
-
         let row = new discord.MessageActionRow()
             .addComponents(
                 new discord.MessageSelectMenu()
                 .setCustomId('select-category-ticket')
                 .setPlaceholder(`Selecteer een Category!`)
                 .addOptions([{
-                        label: "❓ | Vraag",
-                        description: "Voor al je vragen server inhoudelijk!",
-                        value: "question_option",
+                        label: config.ticketOptions.one.label,
+                        description: config.ticketOptions.one.description,
+                        value: config.ticketOptions.one.value,
                     },
 
                     {
-                        label: '💰 | Donatie',
-                        description: 'Voor al je server Donaties!',
-                        value: 'donation_option',
+                        label: config.ticketOptions.two.label,
+                        description: config.ticketOptions.two.description,
+                        value: config.ticketOptions.two.value,
                     },
                     {
-                        label: '❌ | Unban aanvraag',
-                        description: 'Voor als je een unban wilt aanvragen!',
-                        value: 'unban_option',
+                        label: config.ticketOptions.three.label,
+                        description: config.ticketOptions.three.description,
+
+                        value: config.ticketOptions.three.value,
                     },
 
                     {
-                        label: '🔀 | Refund',
-                        description: 'Voor als je een Refund wilt aanvragen!',
-                        value: 'refund_option',
+                        label: config.ticketOptions.four.label,
+                        description: config.ticketOptions.four.description,
+                        value: config.ticketOptions.four.value,
                     },
                     {
-                        label: '👥 | Klacht',
-                        description: 'Voor als je een klacht hebt!!',
-                        value: 'klacht_option',
+                        label: config.ticketOptions.five.label,
+                        description: config.ticketOptions.five.description,
+                        value: config.ticketOptions.five.value,
                     },
 
                 ])
             )
-        await c.send({ embeds: [embed], components: [row] })
+        await c.send({ embeds: [embeds.selectCategory()], components: [row] })
     })
 }
 
 async function reCreateChannel(selectedCat, interaction) {
+    this.selectedCat = selectedCat
     let channel = interaction.channel;
     let user = interaction.user;
     let message = interaction.message;
@@ -75,17 +77,6 @@ async function reCreateChannel(selectedCat, interaction) {
 
     await channel.setName(`${selectedCat}-${interaction.user.username}`)
     await channel.setTopic(`CREATOR: ${user.id} | CLAIMED: NO`)
-
-    let reCreatedEmbed = new discord.MessageEmbed()
-        .setColor(`BLUE`)
-        .setTitle('🦺 | DripLifeRP')
-        .setDescription(`s`)
-        .addField(`\n Ticket Maker:`,
-            `${user.username}`, true)
-        .addField(` \n Reason:`,
-            `${selectedCat}`, true)
-        .setFooter(`DripLifeRP | © 2021`)
-        .setTimestamp()
 
     let reCreateRow = new discord.MessageActionRow()
         .addComponents(
@@ -102,7 +93,7 @@ async function reCreateChannel(selectedCat, interaction) {
             .setStyle('PRIMARY'),
         )
 
-    await channel.send({ components: [reCreateRow], embeds: [reCreatedEmbed] })
+    await channel.send({ components: [reCreateRow], embeds: [embeds.ticketOpened(user, this.selectedCat)] })
 }
 
 

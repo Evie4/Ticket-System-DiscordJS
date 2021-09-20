@@ -1,5 +1,5 @@
 client:
-  token: "ODM2MTc3MDI1MzQwMjc2NzY3.YIaMig.2rFCNoWdd_cWG9xEAaacUfWdy1M"
+  token: "ODM2MTc3MDI1MzQwMjc2NzY3.YIaMig.wV7mpz_sNFbu16snpVNSSnFxDD0"
   prefix: "!"
 
 activities:
@@ -8,3 +8,26 @@ activities:
 
 general:
   footer: "DripLifeRP | © 2021"
+
+ticketOptions:
+    placeholder: "Selecteer een Category"
+    one: 
+      label: "❓ | Vraag"
+      description: "Voor al je vragen server inhoudelijk!"
+      value: "question_option"
+    two: 
+      label: "💰 | Donatie"
+      description: "Voor al je server Donaties!"
+      value: "donation_option"
+    three: 
+      label: "❌ | Unban aanvraag"
+      description: "Voor als je een unban wilt aanvragen!"
+      value: "unban_option"
+    four: 
+      label: "🔀 | Refund"
+      description: "Voor als je een Refund wilt aanvragen!"
+      value: "refund_option"
+    five: 
+      label: "👥 | Klacht"
+      description: "Voor als je een klacht hebt!"
+      value: "klacht_option"

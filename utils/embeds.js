@@ -37,10 +37,12 @@ var notInATicket = function() {
         .setColor(lang.general.color)
 }
 
-var ticketOpened = function() {
+var ticketOpened = function(user, reason) {
     return new discord.MessageEmbed()
         .setTitle(lang.ticket.embeds.ticketOpened.title)
         .setDescription(lang.ticket.embeds.ticketOpened.description)
+        .addField(lang.ticket.embeds.ticketOpened.fields.one.name, lang.ticket.embeds.ticketOpened.fields.one.value.replace(`<user>`, user), lang.ticket.embeds.ticketOpened.fields.one.inline)
+        .addField(lang.ticket.embeds.ticketOpened.fields.second.name, lang.ticket.embeds.ticketOpened.fields.second.value.replace(`<reason>`, reason), lang.ticket.embeds.ticketOpened.fields.one.inline)
         .setFooter(lang.general.footer)
         .setColor(lang.general.color)
 }
@@ -110,12 +112,20 @@ var alreadyOwnsTicket = function() {
 
 var cannotFindUser = function(user) {
     return new discord.MessageEmbed()
-        .setTitle(llang.ticket.embeds.notInATicket.title)
+        .setTitle(lang.ticket.embeds.notInATicket.title)
         .setDescription(lang.ticket.embeds.addedToTicket.cannotFindUser)
         .setFooter(lang.general.footer)
         .setColor(lang.general.color)
 }
 
+var selectCategory = function() {
+    return new discord.MessageEmbed()
+        .setTitle(lang.ticket.embeds.selectCategory.title)
+        .setDescription(lang.ticket.embeds.selectCategory.description)
+        .setFooter(lang.general.footer)
+        .setColor(lang.general.color)
+        .setTimestamp()
+}
 
 
 
@@ -137,6 +147,7 @@ module.exports = {
     ticketClaim,
     alreadyOwnsTicket,
     notInATicket,
+    selectCategory,
     ticketLog,
     cannotFindUser
 }

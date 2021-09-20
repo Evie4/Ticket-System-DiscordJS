@@ -30,9 +30,9 @@ module.exports = {
                 setTimeout(async() => {
                     let getLogChannel = dbModel.getTicketLogChannel(message.guild.id)
                     let logChannel = message.guild.channels.cache.find(x => x.id === getLogChannel)
-                    await message.channel.delete();
-                    await db.set(`${message.guild.id}.${message.author.id}.tickets.opened`, 0)
                     await logChannel.send({ embeds: [embeds.ticketLog(module.exports.name, message.channel.name, message.author.username)], files: [file] })
+                    await db.set(`${message.guild.id}.${message.author.id}.tickets.opened`, 0)
+                    await message.channel.delete();
                 }, 1000 * 10)
             })
         })
