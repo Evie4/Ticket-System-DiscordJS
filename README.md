@@ -29,6 +29,10 @@ Ticket:
 - Close (With a button and Command)
 - Rename
 - Claim (With a button)
+- Transcript (On Close)
+- Category Selector (With Select Menu)
+- Limited Tickets per user
+- Buttons (For Close, Open and Claim)
 
 Setup:
 - ticket role <@id>
