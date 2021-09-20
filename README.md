@@ -17,22 +17,24 @@ You need to use those setup commands!
 
 
 REMINDER: I DIDNT MAKE A NPE HANDLER, SO IF YOU'RE TRYING TO START THE BOT WITHOUT THE SETUP IT WILL GET LOST
+AND I USE QUICK.DB
 ```
 
 
-#Commands And Features
+# Commands And Features
 ```
 Ticket: 
-(prefix)ticketpanel
-(prefix)add <user>
-(prefix)remove <user>
-(prefix)close
-(prefix)rename <name>
+- Add
+- Remove
+- Close (With a button and Command)
+- Rename
+- Claim (With a button)
 
 Setup:
 (prefix)ticket role <@id>
 (prefix)ticket logchannel <#id>
 (prefix)ticket category id
+
 ```
 # What can you change?
 ```
