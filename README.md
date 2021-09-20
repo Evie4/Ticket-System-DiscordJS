@@ -33,8 +33,6 @@ Setup:
 (prefix)ticket role <@id>
 (prefix)ticket logchannel <#id>
 (prefix)ticket category id
-
-
 ```
 # What can you change?
 ```
