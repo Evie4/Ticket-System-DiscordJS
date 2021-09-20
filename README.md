@@ -31,9 +31,9 @@ Ticket:
 - Claim (With a button)
 
 Setup:
-(prefix)ticket role <@id>
-(prefix)ticket logchannel <#id>
-(prefix)ticket category id
+- ticket role <@id>
+- ticket logchannel <#id>
+- ticket category id
 
 ```
 # What can you change?
