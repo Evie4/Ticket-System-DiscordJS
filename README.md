@@ -1,54 +1,69 @@
-# DripLifeRP-Ticket-System
-DripLifeRP-Ticket-System | Easy Coded Bot!
-DiscordJS - V13
+<div align="center">
+
+# Ticket System
+
+Discord.JS Ticket System
+  
+![Discord](https://img.shields.io/static/v1?label=Discord.JS&message=V13&color=red)
+![NodeJS](https://img.shields.io/static/v1?label=Node.JS&message=V16.10.0&color=green)
+![Javascript](https://img.shields.io/static/v1?label=Code%20Language&message=Javascript&color=yellow)
+
+</div>
+
+### Setup the bot
+
+#### Discord Developer Portal
+1. First create a application on the [[Developer Portal](https://discord.com/developers/applications)]
+2. Make your application a bot [[Image](https://user-images.githubusercontent.com/78086344/134589129-89f91109-4abc-4ca2-be56-d7c0ceb7a082.png)]
+
+#### The bot it self!
+1. Change the bot token to your bot token | You can find it under [[here](https://user-images.githubusercontent.com/78086344/134589639-75cdee6e-31bf-4593-b1e1-e8330510adbe.png)] <br>
+You can change the token [[here](https://github.com/hoaxFacts/Ticket-System-DiscordJS/blob/main/data/config.yml)]
+3. When you changed the token, you can simply start up the bot using: "node ." in your terminal!
+* If this gives a error try changing the **Intents** of your bot at [[here](https://user-images.githubusercontent.com/78086344/134589639-75cdee6e-31bf-4593-b1e1-e8330510adbe.png)]
 
 
-# How to setup
+
+### Features
+* Ticket System (Ticketpanel, Close, Remove, Add, Rename)
+* Mutli Guild Supported
+* Transcript System
+* Interaction (Select Menu, Buttons)
+* Changeable (Messages and Config)
+* Database Models | Getters/Setts/Checkers for database information
+
+
+
+
+### Commands
+* Ticketpanel | This creates a panel with a button! | [[Example](https://user-images.githubusercontent.com/78086344/134589897-eb6f11fd-346f-49b3-a392-97a17040837a.png)]
+* Close | This closes the ticket and saves the transcript | [[Example](https://user-images.githubusercontent.com/78086344/134590071-781e1067-6b70-425e-b3ad-a0634fa7b329.png)]
+* Add | Add a mentioned user to the ticket | [[Example](https://user-images.githubusercontent.com/78086344/134590123-268898df-e207-49a9-8f94-31084b80697b.png)]
+* Remove| Remove the mentioned user form the channel | [[Example](https://user-images.githubusercontent.com/78086344/134590167-4769db2e-415e-4cfb-bc1b-b63683bd892c.png)]
+* Rename | Rename the channel to the given name. | [[Will update soon]()]
+* Claim | Claims the ticket (Only works with claim button)! | [[Example](https://user-images.githubusercontent.com/78086344/134590503-03514a9c-b0a5-42a4-9f7a-9ae1cfa07535.png)]
+
+
+
+### Command Handler
+```js
+module.exports = async(client) => {
+const discord = require("discord.js");
+
+module.exports = {
+    name: "test",
+    description: "Dit is een test commando.",
+    perms: {
+        client: [discord.Permissions.ADMINISTRATOR],
+        user: [discord.Permissions.FLAGS.ADMINISTRATOR]
+    },
+    aliases: ["test"],
+
+    execute: async(client, message, args) => {
+    
+    // Code
+        
+    }
+}
 ```
-Download the code and change the Token in "./data/config.yml"
-Create a bot at the Discord Developer Portal
 
-Setup the System it self:
-You need to use those setup commands!
-
-#1 (prefix)ticket role <@id> | This is the Support Role for the tickets
-#2 (prefix)ticket logchannel <#id> | Here will every channel be logged
-#2 (prefix)ticket category id | Dont tagg it just put the ID there!
-
-
-REMINDER: I DIDNT MAKE A NPE HANDLER, SO IF YOU'RE TRYING TO START THE BOT WITHOUT THE SETUP IT WILL GET LOST
-AND I USE QUICK.DB
-```
-
-
-# Commands And Features
-```
-Ticket: 
-- Add
-- Remove
-- Close (With a button and Command)
-- Rename
-- Claim (With a button)
-- Transcript (On Close)
-- Category Selector (With Select Menu)
-- Limited Tickets per user
-- Buttons (For Close, Open and Claim)
-
-Setup:
-- ticket role <@id>
-- ticket logchannel <#id>
-- ticket category id
-
-```
-# What can you change?
-```
-If you don't know what you're doing just modify the Config in "./data/config.yml"
-or the Messages in "./data/messages.yml"
-
-You can change the "Select Menu" in `./utils/channel.js`
-```
-# Requirements
-```
-NodeJS-V16,
-Discord
-```
