@@ -10,6 +10,12 @@ Discord.JS Ticket System
 
 </div>
 
+
+### Reminder
+The code isnt the cleanest, This was a bot for a FiveM server. If you want more opensource bots, just star the project and i will make more!
+
+
+
 ### Setup the bot
 
 #### Discord Developer Portal
@@ -66,6 +72,3 @@ module.exports = {
     }
 }
 ```
-
-### Reminder
-The code isnt the cleanest, This was a bot for a FiveM server. If you want more opensource bots, just star the project and i will make more!
