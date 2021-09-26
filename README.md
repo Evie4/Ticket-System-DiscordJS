@@ -67,3 +67,5 @@ module.exports = {
 }
 ```
 
+### Reminder
+The code isnt the cleanest, This was a bot for a FiveM server. If you want more opensource bots, just star the project and i will make more!
