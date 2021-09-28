@@ -31,7 +31,7 @@ async function createTicketChannel(name, section, interaction) {
             .addComponents(
                 new discord.MessageSelectMenu()
                 .setCustomId('select-category-ticket')
-                .setPlaceholder(`Selecteer een Category!`)
+                .setPlaceholder(config.ticketOptions.placeholder)
                 .addOptions([{
                         label: config.ticketOptions.one.label,
                         description: config.ticketOptions.one.description,
