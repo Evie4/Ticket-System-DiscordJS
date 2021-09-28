@@ -10,6 +10,7 @@ general:
   footer: "DripLifeRP | © 2021"
 
 ticketOptions:
+    placeholder: 'Selecteer een Category!'
     one: 
       label: "❓ | Vraag"
       description: "Voor al je vragen server inhoudelijk!"
